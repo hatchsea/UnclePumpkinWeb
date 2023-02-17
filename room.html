@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- bootstrap5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+  <!-- fontawsome -->
+<script src="https://kit.fontawesome.com/54aed71b55.js" crossorigin="anonymous"></script>
+<!-- swiper -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- mycss -->
+<link rel="stylesheet" href="./scss/all.css">
+</head>
+<body>
+  
+<div class="container">
+  <header>
+    <div class="logo logo__header"></div>
+<nav class="navbar">
+  <a href="indext.html" class="HomeLink__title">南瓜大叔民宿</a>
+  <div class="menu__wrapper">
+  <ul class="menu ">
+    
+    <li class="menu__item"><a  href="./index.html"> 關於我們</a></li>
+    <li class="menu__item"><a  href="">環境瀏覽</a></li>
+    <li class="menu__item"><a  href="./index.html#location">地理交通</a></li>
+    <li class="menu__item"><a  href="./room.html">房型介紹</a></li>
+    <li class="menu__item"><a  href="">住宿訂房</a></li>
+    <li class="menu__item"><a  href="">周邊遊玩</a></li>
+  </ul>
+  <div class="navbar__socialMedia">
+    <a href="#"> <i class="navbar__socialMedia--icon fa-brands fa-facebook"></i></a> 
+    <a href="#"> <i class="navbar__socialMedia--icon  fa-brands fa-line"></i></a>
+
+  </div>
+  </div>
+  </nav>
+  <div class="navbar__hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+ 
+
+ </header>
+
+<div class="content">
+ 
+  <div class="roomtype-wrapper d-flex "> <h2 class="topic-title roomtype__title " >房型介紹</h2>
+  <div class="roomtype__card d-flex">
+  
+     
+  <div class="card" >
+    <h4 class="card-title">雙人雅房　1800元起</h4>
+  <img src="https://fakeimg.pl/250x200/" class="card-img-top" alt="...">
+
+   
+
+    <button type="button" class="card__moreinfo-btn btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#card1Modal">
+  查看詳情 <img src="./image/icons8-search-unscreen01.gif" width="22" alt="">
+</button>
+
+
+ 
+</div>
+ <div class="card" >
+    <h4 class="card-title">雙人套房　2200元起</h4>
+  <img src="https://fakeimg.pl/250x200/" class="card-img-top" alt="...">
+
+   
+
+    <button type="button" class="card__moreinfo-btn btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#card2Modal">
+  查看詳情 <img src="./image/icons8-search-unscreen01.gif" width="22" alt="">
+</button>
+
+
+ 
+</div>
+ <div class="card" >
+    <h4 class="card-title">包棟</h4>
+  <img src="https://fakeimg.pl/250x200/" class="card-img-top" alt="...">
+
+   
+
+    <button type="button" class="card__moreinfo-btn btn btn-primary rounded-pill" data-bs-toggle="modal" data-bs-target="#card3Modal">
+  查看詳情 <img src="./image/icons8-search-unscreen01.gif" width="22" alt="">
+</button>
+
+
+ 
+</div>
+ <div class="card card-empty" >
+    <h4 class="card-title">empty</h4>
+  <img src="https://fakeimg.pl/250x200/" class="card-img-top" alt="...">
+</div>
+</div>
+</div>
+
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="card1Modal"  data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+       
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+
+        <div class="roomtype__modal-wrapper roomtype1">
+
+          <div class="roomtype__modal-info">
+            <div class="roomtype__modal-info-head">
+              <img src="https://fakeimg.pl/50x50/" alt="">
+            <h4 class="roomtype__modal-title">雙人雅房-櫻花小屋</h4>
+
+              </div>
+        <div class="roomtype__modal-info-body">
+          <p>設施：冷氣、 電視、WIFI網路、吹風機、早餐</p>
+          <p><i class="fa-solid fa-check"></i> 定價：2000元</p>
+          <p><i class="fa-solid fa-check"></i> 平日：1800元</p>
+          <p><i class="fa-solid fa-check"></i> 假日：2000元</p>
+          <button type="button" class="phoneLine-btn btn btn-primary rounded-pill"><i class="fa-solid fa-phone"></i>　詢問訂房</button>
+
+        </div>
+          </div>
+
+
+
+          
+ <!-- Swiper -->
+<div class="room__swiper">
+  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <div thumbsSlider="" class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+      <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+     <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+      <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+      <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+      <img src="https://fakeimg.pl/250x150/">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+ <div class="roomtype__modal-wrapper">
+
+          <div class="roomtype__modal-info">
+            <div class="roomtype__modal-info-head">
+              <img src="https://fakeimg.pl/50x50/" alt="">
+            <h4 class="roomtype__modal-title">雙人雅房-沙灘小屋</h4>
+
+              </div>
+        <div class="roomtype__modal-info-body">
+          <p>設施：冷氣、 電視、WIFI網路、吹風機、早餐</p>
+          <p><i class="fa-solid fa-check"></i> 定價：2000元</p>
+          <p><i class="fa-solid fa-check"></i> 平日：1800元</p>
+          <p><i class="fa-solid fa-check"></i> 假日：2000元</p>
+          <button type="button" class="phoneLine-btn btn btn-primary rounded-pill"><i class="fa-solid fa-phone"></i>　詢問訂房</button>
+
+        </div>
+          </div>
+
+
+
+          
+ <!-- Swiper -->
+<div class="room__swiper">
+  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <div thumbsSlider="" class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+      <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="card2Modal"  data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+       
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+
+        <div class="roomtype__modal-wrapper">
+
+          <div class="roomtype__modal-info">
+            <div class="roomtype__modal-info-head">
+              <img src="https://fakeimg.pl/50x50/" alt="">
+            <h4 class="roomtype__modal-title">雙人套房-綠竹小屋</h4>
+
+              </div>
+        <div class="roomtype__modal-info-body">
+          <p> 設施 : 冷氣、套房衛浴、小客廳、小陽台、
+  電視、 WIFI網路、吹風機、早餐</p>
+          <p><i class="fa-solid fa-check"></i> 定價：3500元</p>
+          <p><i class="fa-solid fa-check"></i> 平日：2200元</p>
+          <p><i class="fa-solid fa-check"></i> 假日：2500元</p>
+          <button type="button" class="phoneLine-btn btn btn-primary rounded-pill"><i class="fa-solid fa-phone"></i>　詢問訂房</button>
+
+        </div>
+          </div>
+
+
+
+          
+ <!-- Swiper -->
+<div class="room__swiper">
+  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+         <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+         <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+         <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+       <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+         <img src="https://fakeimg.pl/250x150/">
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <div thumbsSlider="" class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+         <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+         <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+         <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+         <img src="https://fakeimg.pl/250x150/">
+      </div>
+      <div class="swiper-slide">
+        <img src="https://fakeimg.pl/250x150/">
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+      </div>
+  
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="card3Modal"  data-bs-backdrop="static" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+       
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+
+        <div class="roomtype__modal-wrapper">
+
+          <div class="bund__modal-info">
+            <div class="roomtype__modal-info-head">
+             
+            <h4 class="roomtype__modal-title">包棟</h4>
+
+              </div>
+        <div class="roomtype__modal-info-body bund__modal-info-body">
+          <div class="bund-facility">
+          <ul>
+            <li>提供冰箱、電磁爐、卡式爐、微波爐、小烤箱、碗盤餐具等</li>
+            <li>提供早餐食材</li>
+            <li>咖啡豆、磨豆機及沖泡器具可免費使用</li>
+            <li>客廳備有DVD播放器(可自行攜帶喜歡看的DVD片)</li>
+          </ul>
+         </div>
+
+<div class="bund-price">
+          <p><i class="fa-solid fa-check"></i> 1房(2人)包棟  定價: 6000元   平日: 4000元  假日: 4500元</p>
+          <p><i class="fa-solid fa-check"></i> 2房(4人)包棟  定價: 8000元   平日: 6000元  假日: 6500元</p>
+          <p><i class="fa-solid fa-check"></i> 3房(6人)包棟  定價: 9500元   平日: 7500元  假日: 8000元</p>
+           <p><i class="fa-solid fa-check"></i>  (如需加人僅限加1人)</p>
+           
+          </div>
+
+        </div>
+         <button type="button" class="phoneLine-btn btn btn-primary rounded-pill"><i class="fa-solid fa-phone"></i>　詢問訂房</button>
+          </div>
+
+
+
+          
+
+</div>
+      </div>
+  
+    </div>
+  </div>
+</div>
+<!-- Scrollable modal -->
+<div class="modal-dialog modal-dialog-scrollable">
+  ...
+</div>
+</div>
+
+
+<footer>
+
+<div class="footerInfo__wrapper">
+<div class="footer__socialmedia-wrapper">
+ <a href="#"> <i class="footer__socialmedia-icon fa-brands fa-facebook"></i></a> 
+    <a href="#"> <i class="footer__socialmedia-icon  fa-brands fa-line"></i></a>
+    <a href="#"><i class="footer__socialmedia-icon fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="footer__socialmedia-icon fa-brands fa-weixin"></i></a>
+</div>
+
+<div class="footerInfo__content">
+  <p>新北市政府合法民宿(編號218)</p>
+  <p>地址：252新北市三芝區迎旭街38號</p>
+  <p>訂房：0953841831 張小姐</p>
+  <p>Line ID :anis100</p>
+  <p>WeChat:unclepumpkin38</p>
+</div>
+
+
+</div>
+<div class="copyRight">
+  <!-- Copyright &copy; UNCLEPUMPKIN.COM All Rights Reserved. -->
+    &copy; UNCLEPUMPKIN.COM 2023
+</div>
+</footer>
+
+</div>
+
+
+
+
+
+
+
+<!-- toggle navbar -->
+<script>
+
+  const hamburger = document.querySelector(".navbar__hamburger");
+  const navMenu = document.querySelector(".menu");
+  const navbar =  document.querySelector(".navbar");
+  const HomeLink__title = document.querySelector(".HomeLink__title");
+  const navSocialMedia = document.querySelector(".navbar__socialMedia");
+  hamburger.addEventListener("click", ()=> {
+    hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+      navbar.classList.toggle("active"); 
+      HomeLink__title.classList.toggle("active");
+      navSocialMedia.classList.toggle("active");
+  })
+
+  document.querySelectorAll(".menu__item").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    navbar.classList.remove("active"); 
+
+  }))
+</script>
+
+
+<!-- swiper -->
+<script type="module">
+  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+
+  // const swiper = new Swiper(...)
+</script>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  </script>
+
+<!-- bootstrap5 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

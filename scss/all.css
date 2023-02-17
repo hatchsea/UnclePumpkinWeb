@@ -9839,8 +9839,8 @@ table {
 
 /*normalize*/
 @font-face {
-  font-family: "源流明體";
-  src: url(./font/setofont.ttf);
+  font-family: "瀨戶字體";
+  src: url(../font/setofont.ttf);
 }
 body {
   font-family: "Noto Sans TC", sans-serif;
@@ -9849,16 +9849,33 @@ body {
 
 p {
   letter-spacing: 0.2px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
 }
 
 a {
   text-decoration: none;
 }
 
+.content {
+  width: 100%;
+}
+
 .container {
   max-width: 1920px;
   margin: 0 auto;
   padding: 0;
+}
+
+.topic-title {
+  display: inline-block;
+  margin: 120px auto 0;
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e7c177;
+  color: #553F1E;
 }
 
 .fl-row {
@@ -9886,12 +9903,13 @@ h2, .h2 {
   font-weight: 400;
 }
 
-.fz28 {
-  font-size: 28px;
+h4, .h4 {
+  font-size: 18px;
+  font-weight: 500;
 }
 
-.content {
-  width: 100%;
+.fz28 {
+  font-size: 28px;
 }
 
 .container {
@@ -9974,7 +9992,7 @@ header {
 
 .HomeLink__title {
   color: #553F1E;
-  font-family: "源流明體";
+  font-family: "瀨戶字體";
   font-size: 28px;
   margin-left: 10px;
 }
@@ -10131,7 +10149,7 @@ footer {
   position: relative;
 }
 
-.swiper {
+.about__swiper {
   position: absolute;
   left: 0;
   width: 850px;
@@ -10146,7 +10164,7 @@ footer {
   bottom: -10px;
   left: 0;
   font-size: 50px;
-  z-index: 9997;
+  z-index: 9996;
   color: #fff;
 }
 
@@ -10168,6 +10186,7 @@ footer {
 }
 
 .about__info-button-wrapper {
+  font-family: "瀨戶字體";
   display: flex;
   gap: 20px;
   align-items: flex-end;
@@ -10260,10 +10279,6 @@ footer {
   width: 50%;
 }
 
-.accordion div:first-of-type {
-  margin-top: 20px;
-}
-
 .accordion-button {
   background-color: #FCEFD5;
 }
@@ -10327,7 +10342,7 @@ button.accordion-button::after {
   }
 }
 @media (max-width: 768px) {
-  .swiper {
+  .about__swiper {
     width: 100%;
     border-radius: 0%;
   }
@@ -10350,6 +10365,7 @@ button.accordion-button::after {
   }
   .about__info-content {
     width: 100%;
+    padding-left: 12px;
   }
   .about__info-content-bg {
     display: none;
@@ -10368,5 +10384,233 @@ button.accordion-button::after {
   }
   .location__bgDecoration {
     display: none;
+  }
+}
+.roomtype-wrapper {
+  flex-direction: column;
+  align-items: center;
+}
+
+.roomtype__card {
+  width: 100%;
+  margin-top: 60px;
+  justify-content: space-around;
+}
+
+.card {
+  width: 32%;
+  padding: 20px 16px;
+}
+
+.card-title {
+  text-align: center;
+  font-family: "瀨戶字體";
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #553f1e;
+}
+
+.card__moreinfo-btn {
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card-empty {
+  display: none;
+}
+
+.modal-dialog {
+  max-width: 80vw;
+  top: 60px;
+}
+
+.modal-header {
+  border: none;
+}
+
+.roomtype__modal-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.roomtype1 {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #919191;
+}
+
+.roomtype__modal-info {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+}
+
+.roomtype__modal-info-head {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.roomtype__modal-title {
+  color: #553f1e;
+}
+
+.roomtype__modal-info-body {
+  padding: 0 10px;
+}
+
+.roomtype__modal-info-body p {
+  margin-bottom: 20px;
+  color: #626161;
+}
+
+.phoneLine-btn {
+  width: 100%;
+}
+
+.roomtype__modal-info-body li {
+  list-style: circle;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.bund__modal-info {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  gap: 20px;
+}
+
+.bund__modal-info .phoneLine-btn {
+  width: 40%;
+  margin-bottom: 20px;
+}
+
+.bund__modal-info-body {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+
+.bund-facility {
+  width: 45%;
+}
+
+.bund-price {
+  width: 45%;
+}
+
+.swiper {
+  width: 100%;
+}
+
+.room__swiper {
+  width: 60%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  width: 100%;
+}
+
+.mySwiper {
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .roomtype__card {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    align-content: 10px;
+  }
+  .card {
+    width: 45%;
+  }
+  .card-empty {
+    display: block;
+  }
+  .card img {
+    display: none;
+  }
+  .modal-dialog {
+    max-width: 100%;
+    margin: 0;
+  }
+  .roomtype__modal-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .roomtype__modal-info {
+    width: 80%;
+  }
+  .room__swiper {
+    width: 80%;
+  }
+  .bund__modal-info-body {
+    flex-direction: column;
+  }
+  .bund-facility, .bund-price {
+    width: 100%;
   }
 }/*# sourceMappingURL=all.css.map */

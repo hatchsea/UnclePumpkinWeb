@@ -1,0 +1,244 @@
+.roomtype-wrapper{
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.roomtype__card{
+width: 100%;
+margin-top: 60px;
+justify-content: space-around;
+}
+
+.card{
+  width: 32%;
+  padding: 20px 16px;
+  
+}
+
+.card-title{
+  text-align: center;
+ font-family: "瀨戶字體";
+  font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 16px;
+  color: #553f1e;
+}
+.card__moreinfo-btn{
+  margin-top: 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+
+}
+.card-empty{
+  display: none;
+}
+
+//modal
+.modal-dialog{
+  max-width: 80vw;
+  top: 60px;
+}
+.modal-header{
+  border: none;
+}
+
+//modal body
+.roomtype__modal-wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+ 
+
+}
+
+.roomtype1{
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #919191;
+}
+.roomtype__modal-info{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+}
+.roomtype__modal-info-head{
+ width: 100%;
+  display: flex;
+  justify-content: center;
+gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.roomtype__modal-title{
+color: #553f1e;
+}
+
+
+.roomtype__modal-info-body{
+  padding: 0 10px;
+}
+.roomtype__modal-info-body p{
+  margin-bottom: 20px;
+  color: #626161;
+}
+.phoneLine-btn{
+  width: 100%;
+  
+}
+
+.roomtype__modal-info-body li{
+  list-style: circle;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.bund__modal-info{
+display: flex;
+flex-direction: column;
+  width: 90%;
+  align-items: center;
+  gap: 20px;
+
+}
+
+.bund__modal-info .phoneLine-btn{
+  width: 40%;
+  margin-bottom: 20px;
+}
+.bund__modal-info-body{
+display: flex;
+width: 100%;
+justify-content: center;
+gap: 20px;
+}
+.bund-facility{
+  width: 45%;
+}
+
+.bund-price{
+  width: 45%;
+}
+//SWIPER
+ .swiper {
+      width: 100%;
+     
+    }
+
+    .room__swiper{
+      width: 60%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+  
+
+    .swiper {
+      width: 100%;
+      
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mySwiper2 {
+      // height: 80%;
+      width: 100%;
+    }
+
+    .mySwiper {
+      // height: 20%;
+  
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+
+    .mySwiper .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .mySwiper .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+@media (max-width:768px){
+
+  .roomtype__card{
+    flex-wrap: wrap;
+    justify-content: center;
+  gap: 10px;
+  align-content: 10px;
+  
+  }
+.card{
+  width: 45%;
+  
+}
+.card-empty{
+  display: block;
+}
+
+.card img{
+  display: none;
+}
+  
+.modal-dialog{
+  max-width: 100%;
+  margin: 0;
+}
+
+.roomtype__modal-wrapper{
+  flex-direction: column-reverse;
+  align-items: center;
+  
+}
+
+.roomtype__modal-info{
+  width: 80%;
+}
+// .roomtype__modal-info-body{
+//   text-align: center;
+// }
+.room__swiper{
+  width: 80%;
+}
+
+.bund__modal-info-body{
+  flex-direction: column;
+}
+.bund-facility,.bund-price{
+width: 100%;
+}
+}

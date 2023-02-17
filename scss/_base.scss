@@ -1,7 +1,7 @@
 
 @font-face{
-    font-family:'源流明體';
-    src: url(./font/setofont.ttf); 
+    font-family:'瀨戶字體';
+    src: url(../font/setofont.ttf); 
 }
 
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700;900&display=swap');
@@ -15,15 +15,32 @@ body{
 
 p{
   letter-spacing:0.2px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
 }
 a{
   text-decoration: none;
 }
 
+.content{
+  width: 100%;
+}
 .container{
   max-width: 1920px;
   margin: 0 auto;
   padding: 0;
+}
+
+.topic-title{
+  display: inline-block;
+  margin: 120px auto 0;
+  font-size: 36px;
+  font-weight: bold;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #e7c177;
+  color: #553F1E; 
+  
 }
 
 .fl-row{
@@ -47,10 +64,12 @@ h2{
   font-size: 36px;
   font-weight: 400;
 }
+
+h4{
+  font-size: 18px;
+  font-weight: 500;
+}
 .fz28{
   font-size: 28px;
 }
 
-.content{
-  width: 100%;
-}
