@@ -141,7 +141,7 @@
           
  <!-- Swiper -->
 <div class="room__swiper">
-  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mainSwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img src="https://fakeimg.pl/250x150/">
@@ -177,7 +177,7 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
-  <div thumbsSlider="" class="swiper mySwiper">
+  <div thumbsSlider="" class="swiper thumbsSwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
       <img src="https://fakeimg.pl/250x150/">
@@ -236,7 +236,7 @@
           
  <!-- Swiper -->
 <div class="room__swiper">
-  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mainSwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img src="https://fakeimg.pl/250x150/">
@@ -272,7 +272,7 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
-  <div thumbsSlider="" class="swiper mySwiper">
+  <div thumbsSlider="" class="swiper thumbsSwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
        <img src="https://fakeimg.pl/250x150/">
@@ -352,7 +352,7 @@
           
  <!-- Swiper -->
 <div class="room__swiper">
-  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mainSwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img src="https://fakeimg.pl/250x150/">
@@ -388,7 +388,7 @@
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
   </div>
-  <div thumbsSlider="" class="swiper mySwiper">
+  <div thumbsSlider="" class="swiper thumbsSwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <img src="https://fakeimg.pl/250x150/">
@@ -546,36 +546,44 @@
 </script>
 
 
-<!-- swiper -->
-<script type="module">
-  import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
 
-  // const swiper = new Swiper(...)
-</script>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <!-- Initialize Swiper -->
   <script>
-    var swiper = new Swiper(".mySwiper", {
-      loop: true,
-      spaceBetween: 10,
-      slidesPerView: 4,
-      freeMode: true,
-      watchSlidesProgress: true,
-    });
-    var swiper2 = new Swiper(".mySwiper2", {
-      loop: true,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      thumbs: {
-        swiper: swiper,
-      },
-    });
+    const mainSwiperAll = document.querySelectorAll(".mainSwiper");
+    const thumbsSwiperAll = document.querySelectorAll(".thumbsSwiper");
+
+   for (i = 0; i < mainSwiperAll.length; i++) {
+
+      mainSwiperAll[i].classList.add('mainSwiper-' + i);
+      thumbsSwiperAll[i].classList.add('thumbsSwiper-' + i);
+
+      var thumbsSwiper = new Swiper('.thumbsSwiper-' + i, {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+
+      var mainSwiper = new Swiper('.mainSwiper-' + i, {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: thumbsSwiper,
+        },
+      });
+
+    }
+
+  
   </script>
 
 <!-- bootstrap5 -->

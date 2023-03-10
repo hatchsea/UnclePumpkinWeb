@@ -73,17 +73,18 @@
 </div>
 <div class="about__info-wrapper">
 <div class="about__info-button-wrapper">
-<div class="about__info-button about__info-button-pumpkin">
-<h2>南瓜大叔</h2>
-<div class="about__info-button-line about__info-button-line-main"></div>
+<div class="about__info-button ">
+<h2 class="about__info-button-pumpkin">南瓜大叔</h2>
+<div class="about__info-button-line about__info-button-line-pumpkin"></div>
 </div>
-<div class="about__info-button about__info-button-village">
-<h2>芝柏山莊</h2>
-<div class="about__info-button-line about__info-button-line-second"></div>
+<div class="about__info-button ">
+<h2 class="about__info-button-village secondary">芝柏山莊</h2>
+<div class="about__info-button-line about__info-button-line-village secondary"></div>
 </div>
 </div>
 <div class="about__info-content">
 童話裡的南瓜充滿夢幻的色彩，在忙碌的生活偶爾停下腳步，細細享受這輕鬆浪漫的時光是一種幸福。曾經在美國鄉村住了一陣子，愛上了南瓜，愛上在冷冷的冬天裡窩在暖暖的壁爐旁，愛上了種滿花花草草的庭院，在這裡我們找到了夢，一點一滴親手快樂地打造南瓜大叔民宿，雖然不豪華，但却有像家一樣的溫馨。
+<!-- 芝柏山莊裡，許多的建築都是住戶自己天馬行空設計，建議您可以慢慢的欣賞，也許在不經意的角落，就有令你為之驚艷的創作！相信你也會像我們一樣很快的瘋狂的愛上這個世外桃源！ -->
 </div>
 </div>
 <div class="about__info-content-bg"></div>
@@ -180,8 +181,9 @@
 
 
 
-<!-- toggle navbar -->
+
 <script>
+  // toggle navbar 
   console.log(5);
   const hamburger = document.querySelector(".navbar__hamburger");
   const navMenu = document.querySelector(".menu");
@@ -202,6 +204,44 @@
     navbar.classList.remove("active"); 
 
   }))
+
+    // toggle ABOUT button
+const aboutInfo = document.querySelector(".about__info-wrapper")
+const aboutInfoContentText = ["童話裡的南瓜充滿夢幻的色彩，在忙碌的生活偶爾停下腳步，細細享受這輕鬆浪漫的時光是一種幸福。曾經在美國鄉村住了一陣子，愛上了南瓜，愛上在冷冷的冬天裡窩在暖暖的壁爐旁，愛上了種滿花花草草的庭院，在這裡我們找到了夢，一點一滴親手快樂地打造南瓜大叔民宿，雖然不豪華，但却有像家一樣的溫馨。" , " 芝柏山莊裡，許多的建築都是住戶自己天馬行空設計，建議您可以慢慢的欣賞，也許在不經意的角落，就有令你為之驚艷的創作！相信你也會像我們一樣很快的瘋狂的愛上這個世外桃源！"]
+aboutInfo.addEventListener('click',(e)=>{
+  const pumpkinBtn = document.querySelector('.about__info-button-pumpkin')
+  const villageBtn = document.querySelector('.about__info-button-village')
+  const aboutBtnsWrapper = document.querySelector('.about__info-button-wrapper')
+  const aboutInfoContent = document.querySelector('.about__info-content')
+  const aboutInfoContentBg = document.querySelector('.about__info-content-bg')
+  console.log(e.target)
+  if(e.target.matches('.about__info-button-village') || e.target.matches('.about__info-button-line-village')){
+    if(villageBtn.matches('.secondary')){
+aboutBtnsWrapper.classList.add('active')
+pumpkinBtn.classList.add('secondary')
+pumpkinBtn.nextElementSibling.classList.add('secondary')
+villageBtn.classList.remove('secondary')
+villageBtn.nextElementSibling.classList.remove('secondary')
+aboutInfoContent.textContent = aboutInfoContentText[1]
+aboutInfoContentBg.classList.add('active')
+
+}else{return};
+  }else if(e.target.matches('.about__info-button-pumpkin')|| e.target.matches('.about__info-button-line-pumpkin')){
+if(pumpkinBtn.matches('.secondary')){
+  aboutBtnsWrapper.classList.remove('active')
+villageBtn.classList.add('secondary')
+villageBtn.nextElementSibling.classList.add('secondary')
+pumpkinBtn.classList.remove('secondary')
+pumpkinBtn.nextElementSibling.classList.remove('secondary')
+aboutInfoContent.textContent = aboutInfoContentText[0]
+aboutInfoContentBg.classList.remove('active')
+}else{return};
+
+
+  }
+})
+
+
 </script>
 
 

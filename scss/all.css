@@ -10185,6 +10185,10 @@ footer {
   z-index: 9997;
 }
 
+.about__info-button {
+  cursor: pointer;
+}
+
 .about__info-button-wrapper {
   font-family: "瀨戶字體";
   display: flex;
@@ -10192,24 +10196,43 @@ footer {
   align-items: flex-end;
 }
 
-.about__info-button-pumpkin {
+.about__info-button-wrapper.active {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+.about__info-button-pumpkin, .about__info-button-village {
   color: #FFA800;
+}
+
+.about__info-button-pumpkin.secondary {
+  color: #9f8145;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 .about__info-button-line {
   width: 100%;
   margin-top: 5px;
   height: 3px;
+}
+
+.about__info-button-line-pumpkin, .about__info-button-line-village {
   background-color: #ffd279;
 }
 
-.about__info-button-village h2, .about__info-button-village .h2 {
+.about__info-button-line-pumpkin.secondary {
+  background-color: #e7c177;
+  height: 2px;
+}
+
+.about__info-button-village.secondary {
   color: #9f8145;
   font-size: 20px;
   font-weight: 400;
 }
 
-.about__info-button-line-second {
+.about__info-button-line-village.secondary {
   background-color: #e7c177;
   height: 2px;
 }
@@ -10238,6 +10261,13 @@ footer {
   background-color: #473C34;
   border-radius: 50%;
   display: none;
+}
+
+.about__info-content-bg.active {
+  top: 270px;
+  width: 330px;
+  height: 330px;
+  right: -20px;
 }
 
 /*location*/
@@ -10550,22 +10580,22 @@ button.accordion-button::after {
   background-position: center;
 }
 
-.mySwiper2 {
+.mainSwiper {
   width: 100%;
 }
 
-.mySwiper {
+.thumbsSwiper {
   box-sizing: border-box;
   padding: 10px 0;
 }
 
-.mySwiper .swiper-slide {
+.thumbsSwiper .swiper-slide {
   width: 25%;
   height: 100%;
   opacity: 0.4;
 }
 
-.mySwiper .swiper-slide-thumb-active {
+.thumbsSwiper .swiper-slide-thumb-active {
   opacity: 1;
 }
 
