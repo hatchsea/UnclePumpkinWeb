@@ -10745,4 +10745,47 @@ fieldset {
   .book__mail-form, .book__info-accordion {
     width: 100%;
   }
+}
+.box {
+  width: 100%;
+  height: 500px;
+  background-color: #54453c;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.topic {
+  font-size: 100px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+}
+
+.map-title {
+  display: flex;
+  padding-top: 5%;
+  padding-right: 5%;
+  justify-content: flex-end;
+  color: bisque;
+  font-family: "瀨戶字體";
+  font-size: 40px;
+}
+
+.pic1 {
+  background-image: url("../image/attractions01.jpg");
+}
+
+.pic3 {
+  background-image: url("../image/attractions02.jpg");
+}
+
+.pic5 {
+  background-image: url("../image/attractions04.jpg");
+}
+
+.pic7 {
+  background-image: url("../image/attractions06.jpg");
 }/*# sourceMappingURL=all.css.map */

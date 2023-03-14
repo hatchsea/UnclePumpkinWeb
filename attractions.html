@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- bootstrap5 -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"> -->
+  <!-- fontawsome -->
+<script src="https://kit.fontawesome.com/54aed71b55.js" crossorigin="anonymous"></script>
+<!-- swiper -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- mycss -->
+<link rel="stylesheet" href="./scss/all.css">
+</head>
+<body>
+  
+<div class="container">
+  <header>
+    <div class="logo logo__header"></div>
+<nav class="navbar">
+  <a href="indext.html" class="HomeLink__title">南瓜大叔民宿</a>
+  <div class="menu__wrapper">
+  <ul class="menu ">
+    
+    <li class="menu__item"><a  href="./index.html">關於我們</a></li>
+    <li class="menu__item"><a  href="">環境瀏覽</a></li>
+    <li class="menu__item"><a  href="./index.html#location">地理交通</a></li>
+    <li class="menu__item"><a  href="./room.html">房型介紹</a></li>
+    <li class="menu__item"><a  href="#">住宿訂房</a></li>
+    <li class="menu__item"><a  href="">周邊遊玩</a></li>
+  </ul>
+  <div class="navbar__socialMedia">
+    <a href="#"> <i class="navbar__socialMedia--icon fa-brands fa-facebook"></i></a> 
+    <a href="#"> <i class="navbar__socialMedia--icon  fa-brands fa-line"></i></a>
+
+  </div>
+  </div>
+  </nav>
+  <div class="navbar__hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+ 
+
+ </header>
+
+<div class="content">
+
+
+<div class="attractions-wrapper">
+ <div class="box pic1 topic">北海岸</div>
+ <div class="box pic2 map-title">北海岸與觀音山</div>
+ <div class="box pic3 topic">三芝鄉</div>
+ <div class="box pic4 map-title">三芝藝遊</div>
+ <div class="box pic5 topic">賞櫻季</div>
+ <div class="box pic6 map-title">賞櫻路線</div>
+ <div class="box pic7 topic">芝柏山莊</div>
+ <div class="box pic8 map-title">芝柏藝術村導覽</div>
+
+</div>
+
+
+<footer>
+<!-- <div class="logo logo__footer"></div> -->
+<div class="footerInfo__wrapper">
+<div class="footer__socialmedia-wrapper">
+ <a href="#"> <i class="footer__socialmedia-icon fa-brands fa-facebook"></i></a> 
+    <a href="#"> <i class="footer__socialmedia-icon  fa-brands fa-line"></i></a>
+    <a href="#"><i class="footer__socialmedia-icon fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="footer__socialmedia-icon fa-brands fa-weixin"></i></a>
+</div>
+
+<div class="footerInfo__content">
+  <p>新北市政府合法民宿(編號218)</p>
+  <p>地址：252新北市三芝區迎旭街38號</p>
+  <p>訂房：0953841831 張小姐</p>
+  <p>Line ID：anis100</p>
+  <p>WeChat：unclepumpkin38</p>
+</div>
+
+
+</div>
+<div class="copyRight">
+  <!-- Copyright &copy; UNCLEPUMPKIN.COM All Rights Reserved. -->
+    &copy; UNCLEPUMPKIN.COM 2023
+</div>
+</footer>
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+  // toggle navbar 
+  console.log(5);
+  const hamburger = document.querySelector(".navbar__hamburger");
+  const navMenu = document.querySelector(".menu");
+  const navbar =  document.querySelector(".navbar");
+  const HomeLink__title = document.querySelector(".HomeLink__title");
+  const navSocialMedia = document.querySelector(".navbar__socialMedia");
+  hamburger.addEventListener("click", ()=> {
+    hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+      navbar.classList.toggle("active"); 
+      HomeLink__title.classList.toggle("active");
+      navSocialMedia.classList.toggle("active");
+  })
+
+  document.querySelectorAll(".menu__item").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    navbar.classList.remove("active"); 
+
+  }))
+</script>
+ 
+
+<!-- bootstrap5 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
