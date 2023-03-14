@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- bootstrap5 -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"> -->
+  <!-- fontawsome -->
+<script src="https://kit.fontawesome.com/54aed71b55.js" crossorigin="anonymous"></script>
+<!-- swiper -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- mycss -->
+<link rel="stylesheet" href="./scss/all.css">
+</head>
+<body>
+  
+<div class="container">
+  <header>
+    <div class="logo logo__header"></div>
+<nav class="navbar">
+  <a href="indext.html" class="HomeLink__title">南瓜大叔民宿</a>
+  <div class="menu__wrapper">
+  <ul class="menu ">
+    
+    <li class="menu__item"><a  href="./index.html">關於我們</a></li>
+    <li class="menu__item"><a  href="">環境瀏覽</a></li>
+    <li class="menu__item"><a  href="./index.html#location">地理交通</a></li>
+    <li class="menu__item"><a  href="./room.html">房型介紹</a></li>
+    <li class="menu__item"><a  href="#">住宿訂房</a></li>
+    <li class="menu__item"><a  href="">周邊遊玩</a></li>
+  </ul>
+  <div class="navbar__socialMedia">
+    <a href="#"> <i class="navbar__socialMedia--icon fa-brands fa-facebook"></i></a> 
+    <a href="#"> <i class="navbar__socialMedia--icon  fa-brands fa-line"></i></a>
+
+  </div>
+  </div>
+  </nav>
+  <div class="navbar__hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+ 
+
+ </header>
+
+<div class="content">
+
+
+<div class="book__content-wrapper">
+  <h2 class="topic-title book__title" >住宿訂房</h2>
+
+
+<div class="book__info-wrapper"> 
+<!-- book mail form -->
+<div class="book__mail-form">
+  <div class="book__form-remind">
+    <p>填寫表單或直接來電訂房</p>
+    <p>(訂房專線: 0953841831)</p>
+     <p>(填寫下列資訊訂房，我們收到訊息後將儘速與您聯繫並確認是否尚有空房)</p>
+    
+  </div>
+
+  <form class="row g-3 ">
+<div class="mb-3 col-12">
+  <label for="formGroupExampleInput" class="form-label">尊姓大名 *</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="請填入稱呼">
+</div>
+<div class="mb-3 col-12">
+  <label for="formGroupExampleInput2" class="form-label">聯絡電話 *</label>
+  <input type="tel" class="form-control" id="formGroupExampleInput2" placeholder="請留下聯絡方式">
+</div>
+<div class="mb-3 col-12">
+  <label for="formGroupExampleInput2" class="form-label">e-mail *</label>
+  <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="請留下您的e-mail">
+</div>
+<p class="mb-3 col-12">詢問房型</p>
+<fieldset class="row mb-3">
+ <!-- <legend class="mb-3 col-12">詢問房型</legend> -->
+
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"  checked>
+  <label class="form-check-label" for="flexCheckDefault">
+    綠竹小屋
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
+  <label class="form-check-label" for="flexCheckChecked">
+    櫻花小窩
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    沙灘小窩
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
+  <label class="form-check-label" for="flexCheckChecked">
+    包棟
+  </label>
+</div>
+</fieldset>
+<div class="mb-3 mt-3">
+  <label for="formGroupExampleInput3" class="form-label">住宿日期（年/月/日）&其他需求* </label>
+    <textarea id="formGroupExampleInput3" class="form-control" aria-label="With textarea" placeholder="1. EX.2023/1/14住宿一晚　2. 填寫其他需求"></textarea>
+</div>
+<button type="submit" class="btn btn-primary book__mail-form-submit">送出</button>
+
+</form>
+</div>
+
+<!-- book info -->
+<div class="accordion accordion-flush book__info-accordion" id="accordionFlushExample">
+  
+  <div class="accordion-item ">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        
+        訂房程序／匯款帳號
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body"><p>1. 請來電確認或預約 (民宿主人張小姐：0953841831 )</p>
+<p>2. 經電話訂房確認後，請先預付訂金(房價的30~50%)，遇3日以上連續假日或包棟住宿訂金為( 房價的50%)，若於約定的保留時間內未收到匯款訂金則將取消訂房，並且不再另行通知喔。</p>
+<p>3. 匯款後請務必來電告知，我們於收到訂金後，將為您保留房間，餘款為check in時付清。</p>
+<ul class="payment">
+<li>匯款資訊－ATM轉帳/匯款：</li>
+<li>銀行代碼：700</li>
+<li>銀行帳號：00023360447096</li>
+<li>匯款銀行：北投石牌郵局</li>
+<li>匯款戶名：張淑玲</li>
+</ul>
+    </div>
+  </div>
+ 
+</div>
+ <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        
+       住房須知（重要）
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        
+        <p>
+        1. 入住時請出示身分證以供登記，並請繳清餘款(僅收現金)。</p>
+<p> 2. 民宿提供茶包、咖啡可供住客取用，一樓客廳提供冷熱飲水機，如有需要可 借用快煮壺、泡茶組。另有休閒圖書、桌遊及撲克牌等遊戲設備可供使用。</p>
+<p>3. 歡迎旅客來芝柏山莊參觀，請共同維護社區清潔，勿隨意丟棄垃圾及菸蒂。因山莊內夜晚很寧靜，為維護社區居住品質及其他旅客權益，也希望房客來渡假在不影響鄰居的安寧下能有愉快的假期，故請您務必於晚間10：00後降低所有音量，並停止戶外聚會活動及大聲聊天笑鬧等行為，以免因違反噪音管制法，影響鄰居安寧而遭檢舉報警，敬請配合。</p>
+<p>4. 室內全面禁止吸煙，酗酒，嚼檳榔，室內外禁止施放煙火(含社區空地)。</p><p>5. 嚴禁吸毒、賭博及各項違法情事，如發現一律報警。</p><p>6. 南瓜大叔民宿是透天房屋，請家長隨時注意孩童安全，勿攀爬圍牆及觸摸壁爐及煙囪。請愛惜民宿內設施，勿隨意丟擲物品導致一樓或鄰居玻璃遮雨棚破裂(如毀損需負全額賠償費用)。</p><p>7. 為維護住宿安全，民宿1樓室外公共區設有監視器。</p><p>8. 無法提供寵物一起入住，除當日登記入住的房客外，謝絕訪客，不便之處敬請見諒。</p><p>9. 個人貴重物品，請妥善保管，若有遺失請自行負責。</p><p>10. 社區內僅供免費停車，民宿不負任何保管及損害賠償責任。</p></div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        
+        取消退費／延期說明
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <h4 class="book__info-subtitle">一、匯款後若因故欲取消住宿，退費辦法</h4>
+        <table>
+          <thead>
+            <tr>
+            <th>於預定日前通知</th>
+            <th>退還訂金</th>
+            </tr>
+          </thead>
+          <tr>
+            <td>第14日前</td>
+            <td>100％</td>
+          </tr>
+          <tr>
+            <td>第10～13日</td>
+            <td>70％</td>
+          </tr>
+          <tr>
+            <td>第7～9日</td>
+            <td>50％</td>
+          </tr>
+          <tr>
+            <td>第4～6日</td>
+            <td>40％</td>
+          </tr>
+          <tr>
+            <td>第2～3日</td>
+            <td>30％</td>
+          </tr>
+          <tr>
+            <td>第1日</td>
+            <td>20％</td>
+          </tr>
+          <tr>
+            <td>當日/沒通知未到</td>
+            <td>不退還</td>
+          </tr>
+          
+        </table>
+ <h4 class="book__info-subtitle">二、延期</h4>
+ <p>訂房後如因故無法前來，請於7天前通知可選擇延期保留訂金一年，一年內可重新預訂住宿日（僅限一次，不接受第二次改期及退還訂金）</p>
+  <h4 class="book__info-subtitle">三、天災</h4>
+  <p>住宿當天如遇天災（颱風、地震）經新北市政府或旅客所在地政府發佈停止上班上課，將可退回全額訂金或辦理延期住宿</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+ </div>
+</div>
+
+</div>
+
+
+<footer>
+<!-- <div class="logo logo__footer"></div> -->
+<div class="footerInfo__wrapper">
+<div class="footer__socialmedia-wrapper">
+ <a href="#"> <i class="footer__socialmedia-icon fa-brands fa-facebook"></i></a> 
+    <a href="#"> <i class="footer__socialmedia-icon  fa-brands fa-line"></i></a>
+    <a href="#"><i class="footer__socialmedia-icon fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="footer__socialmedia-icon fa-brands fa-weixin"></i></a>
+</div>
+
+<div class="footerInfo__content">
+  <p>新北市政府合法民宿(編號218)</p>
+  <p>地址：252新北市三芝區迎旭街38號</p>
+  <p>訂房：0953841831 張小姐</p>
+  <p>Line ID：anis100</p>
+  <p>WeChat：unclepumpkin38</p>
+</div>
+
+
+</div>
+<div class="copyRight">
+  <!-- Copyright &copy; UNCLEPUMPKIN.COM All Rights Reserved. -->
+    &copy; UNCLEPUMPKIN.COM 2023
+</div>
+</footer>
+
+</div>
+
+
+
+
+
+
+
+
+<script>
+  // toggle navbar 
+  console.log(5);
+  const hamburger = document.querySelector(".navbar__hamburger");
+  const navMenu = document.querySelector(".menu");
+  const navbar =  document.querySelector(".navbar");
+  const HomeLink__title = document.querySelector(".HomeLink__title");
+  const navSocialMedia = document.querySelector(".navbar__socialMedia");
+  hamburger.addEventListener("click", ()=> {
+    hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+      navbar.classList.toggle("active"); 
+      HomeLink__title.classList.toggle("active");
+      navSocialMedia.classList.toggle("active");
+  })
+
+  document.querySelectorAll(".menu__item").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    navbar.classList.remove("active"); 
+
+  }))
+</script>
+ 
+
+<!-- bootstrap5 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js" integrity="sha384-lpyLfhYuitXl2zRZ5Bn2fqnhNAKOAaM/0Kr9laMspuaMiZfGmfwRNFh8HlMy49eQ" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

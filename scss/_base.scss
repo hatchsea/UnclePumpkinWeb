@@ -14,7 +14,7 @@ body{
 }
 
 p{
-  letter-spacing:0.2px;
+  letter-spacing:0.4px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
@@ -49,9 +49,9 @@ a{
 .fl-right{
 justify-content: flex-end;
 }
-ul,li{
-  list-style:none ;
-}
+// ul,li{
+//   list-style:none ;
+// }
 
 .ft-gray{
   color: #535353;

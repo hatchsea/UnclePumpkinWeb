@@ -9848,7 +9848,7 @@ body {
 }
 
 p {
-  letter-spacing: 0.2px;
+  letter-spacing: 0.4px;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.2;
@@ -9884,10 +9884,6 @@ a {
 
 .fl-right {
   justify-content: flex-end;
-}
-
-ul, li {
-  list-style: none;
 }
 
 .ft-gray {
@@ -9929,7 +9925,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   z-index: 9998;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
 }
 
 .menu__wrapper {
@@ -10141,6 +10137,10 @@ footer {
     align-self: center;
   }
 }
+* {
+  transition: all 0.5s;
+}
+
 .about {
   width: 100%;
   height: 554px;
@@ -10406,7 +10406,7 @@ button.accordion-button::after {
   .location__content-wrapper {
     flex-direction: column;
   }
-  .map__wrapper, .accordion {
+  .map__wrapper, .location__accordion {
     width: 100%;
   }
   .location__highlight {
@@ -10641,6 +10641,108 @@ button.accordion-button::after {
     flex-direction: column;
   }
   .bund-facility, .bund-price {
+    width: 100%;
+  }
+}
+.book__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.book__info-wrapper {
+  display: flex;
+  width: 90%;
+  margin-top: 60px;
+  gap: 30px;
+}
+
+.book__info-accordion {
+  width: 60%;
+}
+
+.book__mail-form {
+  width: 40%;
+}
+
+.payment {
+  border-left: #c2a08d 5px solid;
+  padding: 15px;
+}
+
+.payment li {
+  margin-bottom: 10px;
+}
+
+.book__info-subtitle {
+  font-size: 16px;
+  color: #816b5e;
+  padding: 15px;
+}
+
+table {
+  border: 1px solid #816b5e;
+  padding: 20px;
+  text-align: center;
+  border-collapse: collapse;
+  margin-left: 15px;
+}
+
+td {
+  padding: 8px;
+  border: 1px solid #816b5e;
+  color: #626261;
+}
+
+th {
+  padding: 10px;
+  border: 1px solid #816b5e;
+  background-color: #f2f0ef;
+  color: #816b5e;
+}
+
+.book__form-remind {
+  margin-bottom: 20px;
+}
+
+.book__form-remind p {
+  color: #626261;
+  margin-bottom: 10px;
+}
+
+.book__form-remind p:first-child {
+  font-size: 20px;
+  color: #bb6219;
+}
+
+fieldset {
+  margin-left: 10px !important;
+}
+
+#formGroupExampleInput3 {
+  height: 80px;
+}
+
+.form-check {
+  color: #626261;
+}
+
+.book__mail-form-submit {
+  background-color: #fffcf6;
+  border: #c2a08d 2px solid;
+  width: 30%;
+  color: #816b5e;
+}
+
+@media (max-width: 768px) {
+  .book__info-wrapper {
+    flex-direction: column;
+  }
+  .book__mail-form {
+    margin-bottom: 20px;
+  }
+  .book__mail-form, .book__info-accordion {
     width: 100%;
   }
 }/*# sourceMappingURL=all.css.map */

@@ -17,7 +17,8 @@ top: 0;
   justify-content: space-between;
 
   z-index: 9998;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255)
+  // background: linear-gradient(to left ,rgb(255, 255, 255) 70%, rgba(255, 255, 255,0) 80%);
 }
 
 .menu__wrapper{
@@ -88,7 +89,7 @@ top: 0;
 
 footer{
   padding: 20px ;
-  
+ 
   display: flex;
   background-color: #473C34;
   color: #fff;
@@ -214,6 +215,7 @@ justify-content: center;
 
 footer{
    flex-direction: column;
+   
    
 }
 .footerInfo__wrapper{
