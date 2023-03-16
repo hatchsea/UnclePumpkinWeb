@@ -29,9 +29,9 @@
   <div class="menu__wrapper">
   <ul class="menu ">
     
-    <li class="menu__item"><a  href="./index.html">關於我們</a></li>
+    <li class="menu__item"><a  href="#">關於我們</a></li>
     <li class="menu__item"><a  href="./environment.html">環境瀏覽</a></li>
-    <li class="menu__item"><a  href="#location">地理交通</a></li>
+    <li class="menu__item menu__item-location"><a  href="#location">地理交通</a></li>
     <li class="menu__item"><a  href="./room.html">房型介紹</a></li>
     <li class="menu__item"><a  href="./book.html">住宿訂房</a></li>
     <li class="menu__item"><a  href="./attractions.html">周邊遊玩</a></li>
@@ -180,32 +180,36 @@
 
 
 
-
-
-<script>
-  // toggle navbar 
-  console.log(5);
+  <!-- toggle navbar  -->
+<script> 
   const hamburger = document.querySelector(".navbar__hamburger");
   const navMenu = document.querySelector(".menu");
   const navbar =  document.querySelector(".navbar");
-  const HomeLink__title = document.querySelector(".HomeLink__title");
+  const homeLink__title = document.querySelector(".homeLink__title");
   const navSocialMedia = document.querySelector(".navbar__socialMedia");
   hamburger.addEventListener("click", ()=> {
     hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
       navbar.classList.toggle("active"); 
-      HomeLink__title.classList.toggle("active");
+      homeLink__title.classList.toggle("active");
       navSocialMedia.classList.toggle("active");
   })
 
   document.querySelectorAll(".menu__item").forEach(n => n.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
-    navbar.classList.remove("active"); 
-
+    navbar.classList.remove("active");
+    homeLink__title.classList.remove("active");
+      navSocialMedia.classList.remove("active"); 
+// if(n.classList.contains('menu__item-location')){
+//   hamburger.classList.remove("active");
+//   navMenu.classList.add("active");
+//     navbar.classList.add("active"); 
+// }
   }))
-
-    // toggle ABOUT button
+</script>
+<!-- toggle ABOUT button -->
+<script> 
 const aboutInfo = document.querySelector(".about__info-wrapper")
 const aboutInfoContentText = ["童話裡的南瓜充滿夢幻的色彩，在忙碌的生活偶爾停下腳步，細細享受這輕鬆浪漫的時光是一種幸福。曾經在美國鄉村住了一陣子，愛上了南瓜，愛上在冷冷的冬天裡窩在暖暖的壁爐旁，愛上了種滿花花草草的庭院，在這裡我們找到了夢，一點一滴親手快樂地打造南瓜大叔民宿，雖然不豪華，但却有像家一樣的溫馨。" , " 芝柏山莊裡，許多的建築都是住戶自己天馬行空設計，建議您可以慢慢的欣賞，也許在不經意的角落，就有令你為之驚艷的創作！相信你也會像我們一樣很快的瘋狂的愛上這個世外桃源！"]
 aboutInfo.addEventListener('click',(e)=>{
@@ -243,25 +247,74 @@ aboutInfoContentBg.classList.remove('active')
 
 
 </script>
-
-
 <!-- scroll event-->
 <script>
-  window.addEventListener('scroll',()=>{
-    const logo = document.querySelector('.logo__header')
+  const logo = document.querySelector('.logo__header')
     const webTitle = document.querySelector('.homeLink__title')
-    const navbar = document.querySelector(".navbar")
+    
+if(window.matchMedia('(max-width:800px)').matches){
+      webTitle.classList.add('active');
+      navbar.classList.add('active');
+      logo.classList.add('active');
+    }
+    
+if(window.matchMedia('(max-width:768px)').matches){ webTitle.classList.remove('active');
+navbar.classList.remove('active');
+logo.classList.remove('active')}
+  window.addEventListener('resize',()=>{
+     
+    if(window.matchMedia('(max-width:800px)').matches){
+      webTitle.classList.add('active');
+      navbar.classList.add('active');
+      logo.classList.add('active');
+    }
+    
+if(window.matchMedia('(max-width:768px)').matches){ webTitle.classList.remove('active');
+navbar.classList.remove('active');
+logo.classList.remove('active');return }else { window.addEventListener('scroll',()=>{
+   if(window.matchMedia('(max-width:768px)').matches){
+    return;
+   }else if(window.matchMedia('(max-width:800px)').matches){
+    return;
+   }
+   else{
     const scrolled = window.scrollY;
-    if(scrolled >= 250){
+    if(scrolled >= 150){
 webTitle.classList.add('active');
 navbar.classList.add('active');
 logo.classList.add('active');
-    }else if(scrolled <= 250){
+
+    }else if(scrolled <= 150){
       webTitle.classList.remove('active');
 navbar.classList.remove('active');
 logo.classList.remove('active');
-    }
+
+
+    }}
+  })}
+
+
+//  if(window.matchMedia('(min-width:768px)').matches){
+//   window.addEventListener('scroll',()=>{
+//     const logo = document.querySelector('.logo__header')
+//     const webTitle = document.querySelector('.homeLink__title')
+//     const navbar = document.querySelector(".navbar")
+//     const scrolled = window.scrollY;
+//     if(scrolled >= 150){
+// webTitle.classList.add('active');
+// navbar.classList.add('active');
+// logo.classList.add('active');
+
+//     }else if(scrolled <= 150){
+//       webTitle.classList.remove('active');
+// navbar.classList.remove('active');
+// logo.classList.remove('active');
+
+//     }
+//   })}
+  
   })
+ 
 </script>
 
 <!-- swiper -->
