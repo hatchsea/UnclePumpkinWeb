@@ -1,0 +1,127 @@
+
+.environment__container{
+  background-color: #c2a08d;
+}
+
+.environment__title{
+color: #fff;
+// border-bottom: #553F1E;
+}
+.environment-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.environment__swiper-wrapper{
+  display: block;
+  // margin-top: 40px;
+  height: 650px;
+  max-width: 80%;
+ margin: 40px auto 40px;
+  
+}
+
+.pumpkin-mask{
+  position: absolute;
+  top: 0px;
+  z-index: 9990;
+ width: 100%;
+  height: 100%;
+
+}
+.e-swiper-button-next,.e-swiper-button-prev{
+  z-index: 9999;
+  background-color: #54453c;
+  padding: 30px;
+  border-radius: 50%;
+ 
+}
+
+
+
+.e-thumbsSwiper .swiper-slide{
+  border-radius:10%;
+}
+.e-thumbsSwiper img{
+  border-radius:10%;
+}
+// swiper
+
+
+    .e-swiper {
+      max-width: 80%;
+      height: 100%;
+      position: relative;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      // background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+     
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+   
+    .swiper {
+      width: 100%;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mainSwiper {
+      height: 80%;
+      width: 100%;
+    }
+
+    .thumbsSwiper {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+
+    .thumbsSwiper .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .thumbsSwiper .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width : 768px){
+      .pumpkin-mask{
+        display: none;
+      }
+    .environment__swiper-wrapper{
+      max-width: 100%;
+    }
+      .environment__swiper-wrapper{
+        height: 500px;
+      }
+    }

@@ -16,21 +16,27 @@
 />
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- JQuery / JQueryUI -->
+<!-- <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+<script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="jqueryui/style.css"> -->
 <!-- mycss -->
 <link rel="stylesheet" href="./scss/all.css">
 </head>
-<body>
+<body >
   
 <div class="container">
   <header>
-    <div class="logo logo__header"></div>
+    <div class="logo logo__header">  <img src="./image/uplogo.gif" width="120" alt=""></div>
 <nav class="navbar">
-  <a href="indext.html" class="HomeLink__title">南瓜大叔民宿</a>
+  <a href="indext.html" class="homeLink__title">南瓜大叔民宿</a>
   <div class="menu__wrapper">
   <ul class="menu ">
     
     <li class="menu__item"><a  href="./index.html">關於我們</a></li>
-    <li class="menu__item"><a  href="">環境瀏覽</a></li>
+    <li class="menu__item"><a  href="./environment.html">環境瀏覽</a></li>
     <li class="menu__item"><a  href="./index.html#location">地理交通</a></li>
     <li class="menu__item"><a  href="./room.html">房型介紹</a></li>
     <li class="menu__item"><a  href="./book.html">住宿訂房</a></li>
@@ -69,53 +75,58 @@
     
   </div>
 
-  <form class="row g-3 ">
+  <form class="row g-3" enctype="text/plain" id="bookForm">
 <div class="mb-3 col-12">
-  <label for="formGroupExampleInput" class="form-label">尊姓大名 *</label>
-  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="請填入稱呼">
+  <label for="nameText" class="form-label">尊姓大名 *</label>
+  <input type="text" name="Name" class="form-control" id="nameText" placeholder="請填入稱呼" required>
 </div>
 <div class="mb-3 col-12">
-  <label for="formGroupExampleInput2" class="form-label">聯絡電話 *</label>
-  <input type="tel" class="form-control" id="formGroupExampleInput2" placeholder="請留下聯絡方式">
+  <label for="telText" class="form-label">聯絡電話 *</label>
+  <input type="tel" name="Phone" class="form-control" id="telText" placeholder="請留下聯絡方式" required>
 </div>
 <div class="mb-3 col-12">
-  <label for="formGroupExampleInput2" class="form-label">e-mail *</label>
-  <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="請留下您的e-mail">
+  <label for="emailText" class="form-label">e-mail *</label>
+  <input type="email" name="Email" class="form-control" id="emailText" placeholder="請留下您的e-mail" required>
 </div>
-<p class="mb-3 col-12">詢問房型</p>
+<p class="mb-3 col-12">詢問房型*</p>
 <fieldset class="row mb-3">
  <!-- <legend class="mb-3 col-12">詢問房型</legend> -->
 
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"  checked>
-  <label class="form-check-label" for="flexCheckDefault">
+  <input class="form-check-input" type="checkbox" value="綠竹小屋" id="greenRoom"  checked>
+  <label class="form-check-label" for="greenRoom">
     綠竹小屋
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-  <label class="form-check-label" for="flexCheckChecked">
-    櫻花小窩
+  <input class="form-check-input" type="checkbox" value="櫻花小屋" id="pinkRoom">
+  <label class="form-check-label" for="pinkRoom">
+    櫻花小屋
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
-    沙灘小窩
+  <input class="form-check-input" type="checkbox" value="沙灘小屋" id="blueRoom">
+  <label class="form-check-label" for="blueRoom">
+    沙灘小屋
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" >
-  <label class="form-check-label" for="flexCheckChecked">
+  <input class="form-check-input" type="checkbox" value="包棟" id="allRooms" >
+  <label class="form-check-label" for="allRooms">
     包棟
   </label>
 </div>
 </fieldset>
 <div class="mb-3 mt-3">
-  <label for="formGroupExampleInput3" class="form-label">住宿日期（年/月/日）&其他需求* </label>
-    <textarea id="formGroupExampleInput3" class="form-control" aria-label="With textarea" placeholder="1. EX.2023/1/14住宿一晚　2. 填寫其他需求"></textarea>
+   <label for="dateText" class="form-label">住宿日期* </label>
+   <input type="date" name="Date" class="form-control" id="dateText" placeholder="選擇住宿日期" required>
 </div>
-<button type="submit" class="btn btn-primary book__mail-form-submit">送出</button>
+
+<div class="mb-3 mt-3">
+  <label for="otherText" class="form-label">其他需求 </label>
+    <textarea id="otherText" name="Other" class="form-control" aria-label="With textarea" placeholder="填寫其他需求"></textarea>
+</div>
+<a id="mailTo" class="btn btn-primary book__mail-form-submit" id="book__mail-form-submit" style="display: block;">送出</a>
 
 </form>
 </div>
@@ -258,20 +269,18 @@
 
 
 
-
-<script>
-  // toggle navbar 
-  console.log(5);
+   <!-- toggle navbar  -->
+<script> 
   const hamburger = document.querySelector(".navbar__hamburger");
   const navMenu = document.querySelector(".menu");
   const navbar =  document.querySelector(".navbar");
-  const HomeLink__title = document.querySelector(".HomeLink__title");
+  const homeLink__title = document.querySelector(".homeLink__title");
   const navSocialMedia = document.querySelector(".navbar__socialMedia");
   hamburger.addEventListener("click", ()=> {
     hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
       navbar.classList.toggle("active"); 
-      HomeLink__title.classList.toggle("active");
+      homeLink__title.classList.toggle("active");
       navSocialMedia.classList.toggle("active");
   })
 
@@ -282,7 +291,119 @@
 
   }))
 </script>
+<!-- scroll event-->
+<script>
+  const logo = document.querySelector('.logo__header')
+    const webTitle = document.querySelector('.homeLink__title')
+    
+if(window.matchMedia('(max-width:800px)').matches){
+      webTitle.classList.add('active');
+      navbar.classList.add('active');
+      logo.classList.add('active');
+    }
+    
+if(window.matchMedia('(max-width:768px)').matches){ webTitle.classList.remove('active');
+navbar.classList.remove('active');
+logo.classList.remove('active')}
+  window.addEventListener('resize',()=>{
+     
+    if(window.matchMedia('(max-width:800px)').matches){
+      webTitle.classList.add('active');
+      navbar.classList.add('active');
+      logo.classList.add('active');
+    }
+    
+if(window.matchMedia('(max-width:768px)').matches){ webTitle.classList.remove('active');
+navbar.classList.remove('active');
+logo.classList.remove('active');return }else { window.addEventListener('scroll',()=>{
+   if(window.matchMedia('(max-width:768px)').matches){
+    return;
+   }else if(window.matchMedia('(max-width:800px)').matches){
+    return;
+   }
+   else{
+    const scrolled = window.scrollY;
+    if(scrolled >= 150){
+webTitle.classList.add('active');
+navbar.classList.add('active');
+logo.classList.add('active');
+
+    }else if(scrolled <= 150){
+      webTitle.classList.remove('active');
+navbar.classList.remove('active');
+logo.classList.remove('active');
+
+
+    }}
+  })}
+
+
+//  if(window.matchMedia('(min-width:768px)').matches){
+//   window.addEventListener('scroll',()=>{
+//     const logo = document.querySelector('.logo__header')
+//     const webTitle = document.querySelector('.homeLink__title')
+//     const navbar = document.querySelector(".navbar")
+//     const scrolled = window.scrollY;
+//     if(scrolled >= 150){
+// webTitle.classList.add('active');
+// navbar.classList.add('active');
+// logo.classList.add('active');
+
+//     }else if(scrolled <= 150){
+//       webTitle.classList.remove('active');
+// navbar.classList.remove('active');
+// logo.classList.remove('active');
+
+//     }
+//   })}
+  
+  })
  
+</script>
+
+ <!-- form -->
+<script>
+// datepicker
+
+// $(function(){
+//   $("#datepicker").datepicker();
+// });
+
+// 表格事件監聽器
+bookForm.addEventListener("click" , (e)=>{
+  if (e.target.matches('#mailTo')){
+    const imputTexts = Array.from(document.querySelectorAll('form input.form-control'))
+    const imputCheckedboxes = Array.from(document.querySelectorAll('form input.form-check-input:checked'))
+    const myMail = 'pumpkin86353450@gmail.com'
+
+   if(imputTexts.some((input) => input.value.trim().length === 0)){alert('請輸入必填欄位'); return}
+  if (imputCheckedboxes.some((input)=>input.value.length !== 0)){
+const name = nameText.value;
+const tel = telText.value;
+const mail = emailText.value;
+let rooms = '';
+for(i = 0 ; i < imputCheckedboxes.length ; i++){
+rooms += `${imputCheckedboxes[i].value} `
+} 
+const date = dateText.value;
+const others = otherText.value;
+mailTo.href=`mailto:${myMail}?subject=${name}詢問訂房&body=您好，%0A我想詢問房型：${rooms}%0A住宿日期：${date}%0A其他需求：${others}%0A請透過以下方式聯絡我：%0A${name}%0A${tel}%0A${mail}`
+
+  }else{alert('請選擇房型'); return}
+}
+})
+// 當按下按鈕時
+// 宣告各變數取得input的value
+// 檢查輸入欄位是否為空白 若是則alert跳出(some input的value.trim().length === 0 的 )
+// imputText = document.querySelectorAll('form input.form-control')
+// imputCheckbox = document.querySelectorAll('form input.form-check-input')
+// if (imputText.some((input) => input.value.trim().length === 0)){alert('請輸入必填欄位'); return}
+// else if (imputCheckbox.some((input)=>input.value.length !== 0){繼續繼續剩下的})
+// 
+
+
+</script>
+
 
 <!-- bootstrap5 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>

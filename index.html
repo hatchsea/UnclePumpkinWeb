@@ -23,14 +23,14 @@
   
 <div class="container">
   <header>
-    <div class="logo logo__header"></div>
+    <div class="logo logo__header"><img src="./image/uplogo.gif" width="120" alt=""></div>
 <nav class="navbar">
-  <a href="indext.html" class="HomeLink__title">南瓜大叔民宿</a>
+  <a href="indext.html" class="homeLink__title">南瓜大叔民宿</a>
   <div class="menu__wrapper">
   <ul class="menu ">
     
     <li class="menu__item"><a  href="./index.html">關於我們</a></li>
-    <li class="menu__item"><a  href="">環境瀏覽</a></li>
+    <li class="menu__item"><a  href="./environment.html">環境瀏覽</a></li>
     <li class="menu__item"><a  href="#location">地理交通</a></li>
     <li class="menu__item"><a  href="./room.html">房型介紹</a></li>
     <li class="menu__item"><a  href="./book.html">住宿訂房</a></li>
@@ -244,6 +244,25 @@ aboutInfoContentBg.classList.remove('active')
 
 </script>
 
+
+<!-- scroll event-->
+<script>
+  window.addEventListener('scroll',()=>{
+    const logo = document.querySelector('.logo__header')
+    const webTitle = document.querySelector('.homeLink__title')
+    const navbar = document.querySelector(".navbar")
+    const scrolled = window.scrollY;
+    if(scrolled >= 250){
+webTitle.classList.add('active');
+navbar.classList.add('active');
+logo.classList.add('active');
+    }else if(scrolled <= 250){
+      webTitle.classList.remove('active');
+navbar.classList.remove('active');
+logo.classList.remove('active');
+    }
+  })
+</script>
 
 <!-- swiper -->
 <script type="module">

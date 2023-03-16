@@ -23,14 +23,14 @@
   
 <div class="container">
   <header>
-    <div class="logo logo__header"></div>
+    <div class="logo logo__header">  <img src="./image/uplogo.gif" width="120" alt=""></div>
 <nav class="navbar">
-  <a href="indext.html" class="HomeLink__title">南瓜大叔民宿</a>
+  <a href="indext.html" class="homeLink__title">南瓜大叔民宿</a>
   <div class="menu__wrapper">
   <ul class="menu ">
     
     <li class="menu__item"><a  href="./index.html">關於我們</a></li>
-    <li class="menu__item"><a  href="">環境瀏覽</a></li>
+    <li class="menu__item"><a  href="./environment.html">環境瀏覽</a></li>
     <li class="menu__item"><a  href="./index.html#location">地理交通</a></li>
     <li class="menu__item"><a  href="./room.html">房型介紹</a></li>
     <li class="menu__item"><a  href="#">住宿訂房</a></li>
@@ -58,7 +58,7 @@
 <div class="attractions-wrapper">
  <div class="box pic1 topic">北海岸</div>
  <div class="box pic2 map-title">北海岸與觀音山</div>
- <div class="box pic3 topic">三芝鄉</div>
+ <div class="box pic3 topic">三芝</div>
  <div class="box pic4 map-title">三芝藝遊</div>
  <div class="box pic5 topic">賞櫻季</div>
  <div class="box pic6 map-title">賞櫻路線</div>
@@ -103,19 +103,18 @@
 
 
 
-<script>
-  // toggle navbar 
-  console.log(5);
+   <!-- toggle navbar  -->
+<script> 
   const hamburger = document.querySelector(".navbar__hamburger");
   const navMenu = document.querySelector(".menu");
   const navbar =  document.querySelector(".navbar");
-  const HomeLink__title = document.querySelector(".HomeLink__title");
+  const homeLink__title = document.querySelector(".homeLink__title");
   const navSocialMedia = document.querySelector(".navbar__socialMedia");
   hamburger.addEventListener("click", ()=> {
     hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
       navbar.classList.toggle("active"); 
-      HomeLink__title.classList.toggle("active");
+      homeLink__title.classList.toggle("active");
       navSocialMedia.classList.toggle("active");
   })
 
@@ -126,7 +125,76 @@
 
   }))
 </script>
+<!-- scroll event-->
+<script>
+  const logo = document.querySelector('.logo__header')
+    const webTitle = document.querySelector('.homeLink__title')
+    
+if(window.matchMedia('(max-width:800px)').matches){
+      webTitle.classList.add('active');
+      navbar.classList.add('active');
+      logo.classList.add('active');
+    }
+    
+if(window.matchMedia('(max-width:768px)').matches){ webTitle.classList.remove('active');
+navbar.classList.remove('active');
+logo.classList.remove('active')}
+  window.addEventListener('resize',()=>{
+     
+    if(window.matchMedia('(max-width:800px)').matches){
+      webTitle.classList.add('active');
+      navbar.classList.add('active');
+      logo.classList.add('active');
+    }
+    
+if(window.matchMedia('(max-width:768px)').matches){ webTitle.classList.remove('active');
+navbar.classList.remove('active');
+logo.classList.remove('active');return }else { window.addEventListener('scroll',()=>{
+   if(window.matchMedia('(max-width:768px)').matches){
+    return;
+   }else if(window.matchMedia('(max-width:800px)').matches){
+    return;
+   }
+   else{
+    const scrolled = window.scrollY;
+    if(scrolled >= 150){
+webTitle.classList.add('active');
+navbar.classList.add('active');
+logo.classList.add('active');
+
+    }else if(scrolled <= 150){
+      webTitle.classList.remove('active');
+navbar.classList.remove('active');
+logo.classList.remove('active');
+
+
+    }}
+  })}
+
+
+//  if(window.matchMedia('(min-width:768px)').matches){
+//   window.addEventListener('scroll',()=>{
+//     const logo = document.querySelector('.logo__header')
+//     const webTitle = document.querySelector('.homeLink__title')
+//     const navbar = document.querySelector(".navbar")
+//     const scrolled = window.scrollY;
+//     if(scrolled >= 150){
+// webTitle.classList.add('active');
+// navbar.classList.add('active');
+// logo.classList.add('active');
+
+//     }else if(scrolled <= 150){
+//       webTitle.classList.remove('active');
+// navbar.classList.remove('active');
+// logo.classList.remove('active');
+
+//     }
+//   })}
+  
+  })
  
+</script>
+
 
 <!-- bootstrap5 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>

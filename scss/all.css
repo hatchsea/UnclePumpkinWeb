@@ -9908,8 +9908,21 @@ h4, .h4 {
   font-size: 28px;
 }
 
+html, body {
+  height: 100%;
+}
+
 .container {
   overflow: hidden;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+.content {
+  overflow: hidden;
+  width: 100%;
+  flex-grow: 1;
 }
 
 /* header*/
@@ -9926,6 +9939,10 @@ header {
   justify-content: space-between;
   z-index: 9998;
   background-color: rgb(255, 255, 255);
+}
+
+.navbar.active {
+  justify-content: flex-end;
 }
 
 .menu__wrapper {
@@ -9986,14 +10003,14 @@ header {
   background-color: #535353;
 }
 
-.HomeLink__title {
+.homeLink__title {
   color: #553F1E;
   font-family: "瀨戶字體";
   font-size: 28px;
-  margin-left: 10px;
+  margin-left: 60px;
 }
 
-.HomeLink__title.active {
+.homeLink__title.active {
   display: none;
 }
 
@@ -10049,14 +10066,19 @@ footer {
 }
 
 .logo__header {
+  width: 40px;
   position: fixed;
-  top: 5px;
-  left: 10px;
-  width: 120px;
-  height: 120px;
-  background-color: #bb6219;
-  border-radius: 50%;
+  top: 8px;
+  left: 15px;
   z-index: 9999;
+}
+
+.logo__header img {
+  width: 100%;
+}
+
+.logo__header.active {
+  width: 120px;
 }
 
 .logo__footer {
@@ -10303,6 +10325,7 @@ footer {
 
 .map {
   width: 100%;
+  box-shadow: rgba(120, 102, 90, 0.5) 1px 1px 10px 1px;
 }
 
 .accordion {
@@ -10432,6 +10455,18 @@ button.accordion-button::after {
   padding: 20px 16px;
 }
 
+.roomcard__imgWrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.roomcard__imgWrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .card-title {
   text-align: center;
   font-family: "瀨戶字體";
@@ -10550,6 +10585,7 @@ button.accordion-button::after {
 
 .room__swiper {
   width: 60%;
+  height: 350px;
 }
 
 .swiper-slide {
@@ -10599,14 +10635,6 @@ button.accordion-button::after {
   opacity: 1;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 @media (max-width: 768px) {
   .roomtype__card {
     flex-wrap: wrap;
@@ -10624,8 +10652,8 @@ button.accordion-button::after {
     display: none;
   }
   .modal-dialog {
-    max-width: 100%;
-    margin: 0;
+    max-width: 95%;
+    margin: 0 auto;
   }
   .roomtype__modal-wrapper {
     flex-direction: column-reverse;
@@ -10635,7 +10663,7 @@ button.accordion-button::after {
     width: 80%;
   }
   .room__swiper {
-    width: 80%;
+    width: 95%;
   }
   .bund__modal-info-body {
     flex-direction: column;
@@ -10788,4 +10816,123 @@ fieldset {
 
 .pic7 {
   background-image: url("../image/attractions06.jpg");
+}
+
+.environment__container {
+  background-color: #c2a08d;
+}
+
+.environment__title {
+  color: #fff;
+}
+
+.environment-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.environment__swiper-wrapper {
+  display: block;
+  height: 650px;
+  max-width: 80%;
+  margin: 40px auto 40px;
+}
+
+.pumpkin-mask {
+  position: absolute;
+  top: 0px;
+  z-index: 9990;
+  width: 100%;
+  height: 100%;
+}
+
+.e-swiper-button-next, .e-swiper-button-prev {
+  z-index: 9999;
+  background-color: #54453c;
+  padding: 30px;
+  border-radius: 50%;
+}
+
+.e-thumbsSwiper .swiper-slide {
+  border-radius: 10%;
+}
+
+.e-thumbsSwiper img {
+  border-radius: 10%;
+}
+
+.e-swiper {
+  max-width: 80%;
+  height: 100%;
+  position: relative;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mainSwiper {
+  height: 80%;
+  width: 100%;
+}
+
+.thumbsSwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.thumbsSwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.thumbsSwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .pumpkin-mask {
+    display: none;
+  }
+  .environment__swiper-wrapper {
+    max-width: 100%;
+  }
+  .environment__swiper-wrapper {
+    height: 500px;
+  }
 }/*# sourceMappingURL=all.css.map */

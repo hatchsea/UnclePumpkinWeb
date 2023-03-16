@@ -15,7 +15,15 @@ justify-content: space-around;
   padding: 20px 16px;
   
 }
-
+.roomcard__imgWrapper{
+  width: 100%;
+  height: 100%;
+}
+.roomcard__imgWrapper img{
+  width: 100%;
+height: 100%;
+object-fit: cover;
+}
 .card-title{
   text-align: center;
  font-family: "瀨戶字體";
@@ -132,6 +140,7 @@ gap: 20px;
 
     .room__swiper{
       width: 60%;
+      height: 350px;
     }
     .swiper-slide {
       text-align: center;
@@ -161,6 +170,7 @@ gap: 20px;
     .swiper-slide {
       background-size: cover;
       background-position: center;
+    
     }
 
     .mainSwiper {
@@ -183,13 +193,6 @@ gap: 20px;
 
     .thumbsSwiper .swiper-slide-thumb-active {
       opacity: 1;
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
     }
 
 
@@ -215,8 +218,8 @@ gap: 20px;
 }
   
 .modal-dialog{
-  max-width: 100%;
-  margin: 0;
+  max-width: 95%;
+  margin: 0 auto;
 }
 
 .roomtype__modal-wrapper{
@@ -232,7 +235,7 @@ gap: 20px;
 //   text-align: center;
 // }
 .room__swiper{
-  width: 80%;
+  width: 95%;
 }
 
 .bund__modal-info-body{
