@@ -8,20 +8,21 @@
   background-size: cover;
 }
 
-.topic{
-  font-size: 100px;
+.attractions__topic{  
   display: flex;
-  align-items: center;
-  // color: bisque;
-    color: #fff;
+  align-items: center;   
+}
+.attractions__topic .attractions__topic-title{
+font-size: 100px;
+
+  color: #fff;
     font-weight: 500;
 }
-
-.map-title{
+.mapbox{
   display: flex;
-  padding-top: 5%;
-  padding-right: 5%;
-  justify-content: flex-end;
+  justify-content: space-around;
+  padding: 3%;
+  height: auto;
   color: bisque;
  font-family:'瀨戶字體';
   font-size: 40px;
@@ -44,3 +45,33 @@
 .pic7{
   background-image: url("../image/attractions06.jpg");
 }
+
+
+.travelMap__wrapper{
+  width: 70%;
+  
+}
+.travelMap{
+ width: 100%;
+// max-height: 100%;
+}
+
+@media (max-width: 1060px){
+ 
+  .mapbox{
+    flex-direction: column-reverse;
+    gap: 30px;
+     font-size: 32px;
+     align-items: end;
+  }
+  .travelMap__wrapper{
+     width: 85%;
+    align-self: center;
+  }
+}
+
+@media (max-width: 768px){
+ .attractions__topic{
+    font-size: 80px;
+    height: 400px;
+  }}

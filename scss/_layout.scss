@@ -6,17 +6,20 @@ html,body{
  display: flex;
  min-height: 100%;
  flex-direction: column;
+ 
 }
 .content{
   overflow: hidden;
   width: 100%;
 flex-grow: 1;
+
 }
 
 /* header*/
 
 header{
   background-color: #fff;
+  
 }
 .navbar{
 width: 100%;
@@ -64,7 +67,7 @@ top: 0;
 .navbar__socialMedia--icon{
   font-size: 24px;
    color: #4A1F05 ;
-   padding: 5px 2px;
+   padding: 6px 2px;
    transition: all .3s ease;
 }
 .navbar__socialMedia--icon:hover{
@@ -183,10 +186,10 @@ footer{
 
 @media (max-width: 768px) {
 /*header*/
-.navbar{
-  top: 0;
+// .navbar{
+//   top: 0;
    
-  }
+//   }
 
 .menu{
   left: -100%;

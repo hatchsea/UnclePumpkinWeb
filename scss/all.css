@@ -9976,7 +9976,7 @@ header {
 .navbar__socialMedia--icon {
   font-size: 24px;
   color: #4A1F05;
-  padding: 5px 2px;
+  padding: 6px 2px;
   transition: all 0.3s ease;
 }
 
@@ -10091,9 +10091,6 @@ footer {
 /*RWD*/
 @media (max-width: 768px) {
   /*header*/
-  .navbar {
-    top: 0;
-  }
   .menu {
     left: -100%;
     top: 0;
@@ -10804,19 +10801,22 @@ fieldset {
   background-size: cover;
 }
 
-.topic {
-  font-size: 100px;
+.attractions__topic {
   display: flex;
   align-items: center;
+}
+
+.attractions__topic .attractions__topic-title {
+  font-size: 100px;
   color: #fff;
   font-weight: 500;
 }
 
-.map-title {
+.mapbox {
   display: flex;
-  padding-top: 5%;
-  padding-right: 5%;
-  justify-content: flex-end;
+  justify-content: space-around;
+  padding: 3%;
+  height: auto;
   color: bisque;
   font-family: "瀨戶字體";
   font-size: 40px;
@@ -10838,6 +10838,32 @@ fieldset {
   background-image: url("../image/attractions06.jpg");
 }
 
+.travelMap__wrapper {
+  width: 70%;
+}
+
+.travelMap {
+  width: 100%;
+}
+
+@media (max-width: 1060px) {
+  .mapbox {
+    flex-direction: column-reverse;
+    gap: 30px;
+    font-size: 32px;
+    align-items: end;
+  }
+  .travelMap__wrapper {
+    width: 85%;
+    align-self: center;
+  }
+}
+@media (max-width: 768px) {
+  .attractions__topic {
+    font-size: 80px;
+    height: 400px;
+  }
+}
 .environment__container {
   background-color: #c2a08d;
 }
