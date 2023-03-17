@@ -5,7 +5,6 @@
 
 .environment__title{
 color: #fff;
-// border-bottom: #553F1E;
 }
 .environment-wrapper{
   display: flex;
@@ -15,11 +14,10 @@ color: #fff;
 }
 
 .environment__swiper-wrapper{
-  display: block;
-  // margin-top: 40px;
+  display: block; 
   height: 650px;
   max-width: 80%;
- margin: 40px auto 40px;
+  margin: 40px auto 40px;
   
 }
 
@@ -59,7 +57,7 @@ color: #fff;
     .swiper-slide {
       text-align: center;
       font-size: 18px;
-      // background: #fff;
+      background:#c2a08d;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -100,11 +98,12 @@ color: #fff;
     .thumbsSwiper .swiper-slide {
       width: 25%;
       height: 100%;
-      opacity: 0.4;
+      opacity: 0.8;
     }
 
     .thumbsSwiper .swiper-slide-thumb-active {
       opacity: 1;
+      border: #54453c 3px dashed;
     }
 
     .swiper-slide img {
@@ -113,6 +112,8 @@ color: #fff;
       height: 100%;
       object-fit: cover;
     }
+
+  
 
     @media (max-width : 768px){
       .pumpkin-mask{

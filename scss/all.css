@@ -10176,6 +10176,7 @@ footer {
   margin-top: 52px;
   border-radius: 9% 91% 100% 0%/0% 100% 0% 100%;
   overflow: hidden;
+  box-shadow: rgba(85, 63, 30, 0.5) 1px 1px 5px;
 }
 
 .about__title1 {
@@ -10806,7 +10807,7 @@ fieldset {
   align-items: center;
 }
 
-.attractions__topic .attractions__topic-title {
+.attractions__topic-title {
   font-size: 100px;
   color: #fff;
   font-weight: 500;
@@ -10860,8 +10861,10 @@ fieldset {
 }
 @media (max-width: 768px) {
   .attractions__topic {
-    font-size: 80px;
     height: 400px;
+  }
+  .attractions__topic-title {
+    font-size: 80px;
   }
 }
 .environment__container {
@@ -10917,6 +10920,7 @@ fieldset {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
+  background: #c2a08d;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10956,11 +10960,12 @@ fieldset {
 .thumbsSwiper .swiper-slide {
   width: 25%;
   height: 100%;
-  opacity: 0.4;
+  opacity: 0.8;
 }
 
 .thumbsSwiper .swiper-slide-thumb-active {
   opacity: 1;
+  border: #54453c 3px dashed;
 }
 
 .swiper-slide img {

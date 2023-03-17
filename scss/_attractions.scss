@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;   
 }
-.attractions__topic .attractions__topic-title{
+.attractions__topic-title{
 font-size: 100px;
 
   color: #fff;
@@ -71,7 +71,10 @@ font-size: 100px;
 }
 
 @media (max-width: 768px){
- .attractions__topic{
-    font-size: 80px;
+  .attractions__topic{
     height: 400px;
+  }
+ .attractions__topic-title{
+    font-size: 80px;
+    
   }}
