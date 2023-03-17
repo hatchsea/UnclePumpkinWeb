@@ -10427,6 +10427,9 @@ button.accordion-button::after {
   .location__content-wrapper {
     flex-direction: column;
   }
+  .location__title {
+    padding-top: 60px;
+  }
   .map__wrapper, .location__accordion {
     width: 100%;
   }
@@ -10920,7 +10923,7 @@ fieldset {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #c2a08d;
+  background: transparent;
   display: flex;
   justify-content: center;
   align-items: center;

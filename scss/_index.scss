@@ -331,7 +331,9 @@ padding-left: 12px;
 .location__content-wrapper{
   flex-direction: column;
 }
-
+.location__title{
+  padding-top:60px;
+}
 .map__wrapper , .location__accordion{
   width: 100%;
 }
