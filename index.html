@@ -245,70 +245,53 @@ aboutInfoContentBg.classList.remove('active')
 </script>
 <!-- scroll event-->
 <script>
+ 
   const logo = document.querySelector('.logo__header')
     const webTitle = document.querySelector('.homeLink__title')
-    
-if(window.matchMedia('(max-width:800px)').matches){
-      webTitle.classList.add('active');
+    const maxWidth800 = window.matchMedia('(max-width:800px)');
+    const maxWidth768 = window.matchMedia('(max-width:768px)');
+     function logoLarge(){
+       webTitle.classList.add('active');
       navbar.classList.add('active');
       logo.classList.add('active');
+  }
+   function logoSmall(){
+       webTitle.classList.remove('active');
+      navbar.classList.remove('active');
+      logo.classList.remove('active');
+  }
+// 開啟畫面預設
+if(maxWidth800.matches){
+      logoLarge()
+    }    
+if(maxWidth768.matches){
+logoSmall()
+}
+// 改變螢幕大小後調整預設
+ window.addEventListener('resize',()=>{     
+    if(maxWidth800.matches){
+   logoLarge()
     }
     
-if(window.matchMedia('(max-width:768px)').matches){ webTitle.classList.remove('active');
-navbar.classList.remove('active');
-logo.classList.remove('active')}
-  window.addEventListener('resize',()=>{
-     
-    if(window.matchMedia('(max-width:800px)').matches){
-      webTitle.classList.add('active');
-      navbar.classList.add('active');
-      logo.classList.add('active');
-    }
-    
-if(window.matchMedia('(max-width:768px)').matches){ webTitle.classList.remove('active');
-navbar.classList.remove('active');
-logo.classList.remove('active');return }else { window.addEventListener('scroll',()=>{
-   if(window.matchMedia('(max-width:768px)').matches){
+if(maxWidth768.matches){
+  logoSmall()
+}
+})
+// 依螢幕尺寸決定滾動事件的觸發
+ window.addEventListener('scroll',()=>{
+   if(maxWidth768.matches){
     return;
-   }else if(window.matchMedia('(max-width:800px)').matches){
+   }else if(maxWidth800.matches){
     return;
    }
    else{
     const scrolled = window.scrollY;
     if(scrolled >= 150){
-webTitle.classList.add('active');
-navbar.classList.add('active');
-logo.classList.add('active');
+ logoLarge()
 
     }else if(scrolled <= 150){
-      webTitle.classList.remove('active');
-navbar.classList.remove('active');
-logo.classList.remove('active');
-
-
+logoSmall()
     }}
-  })}
-
-
-//  if(window.matchMedia('(min-width:768px)').matches){
-//   window.addEventListener('scroll',()=>{
-//     const logo = document.querySelector('.logo__header')
-//     const webTitle = document.querySelector('.homeLink__title')
-//     const navbar = document.querySelector(".navbar")
-//     const scrolled = window.scrollY;
-//     if(scrolled >= 150){
-// webTitle.classList.add('active');
-// navbar.classList.add('active');
-// logo.classList.add('active');
-
-//     }else if(scrolled <= 150){
-//       webTitle.classList.remove('active');
-// navbar.classList.remove('active');
-// logo.classList.remove('active');
-
-//     }
-//   })}
-  
   })
  
 </script>
