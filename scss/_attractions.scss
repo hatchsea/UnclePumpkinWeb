@@ -79,24 +79,7 @@ font-size: 100px;
     
   }
 .box{
-  width: auto;
-}
-.pic1{
-  background-image: url("../image/attractions01_mobile.jpg");
-  
-}
-
-.pic3{
-  background-image: url("../image/attractions02_mobile.jpg");
-
-}
-
-.pic5{
-  background-image: url("../image/attractions04_mobile.jpg");
-}
-
-.pic7{
-  background-image: url("../image/attractions06_mobile.jpg");
+  background-attachment:scroll;
 }
 
 }
